@@ -1,6 +1,14 @@
+* {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
 h1 {
     text-align: center;
     padding: 20px;
+}
+
+.navbar-light .navbar-brand {
+    color: white;    
 }
 
 #project-entry {
