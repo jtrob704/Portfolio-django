@@ -1,5 +1,9 @@
 * {
-    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+}
+
+body {
+    background-image: url('bruce-solid-hardwood-shd3500-64_1000.jpg');
 }
 
 h1 {
@@ -7,8 +11,13 @@ h1 {
     padding: 20px;
 }
 
-.navbar-light .navbar-brand {
-    color: white;    
+.navbar {
+    background: linear-gradient(to right, silver, white);
+}
+
+.navbar-brand {
+    font-size: 24pt;
+    color: white;
 }
 
 #project-entry {
@@ -18,4 +27,21 @@ h1 {
 
 #project-entry img {
     padding-bottom: 20px;
+}
+
+#project-card {
+    box-shadow: 10px 10px 5px #888888;
+    margin-bottom: 20px;
+}
+
+#project-card:hover {
+    bottom: 20px;
+}
+
+.card-header, .card-footer {
+    background-image: url('metal.jpg');
+}
+
+#github-btn {
+    margin-bottom: 20px;
 }

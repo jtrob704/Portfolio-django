@@ -1,8 +1,9 @@
 from django.conf.urls import url, include
 from django.conf import settings
 from django.conf.urls.static import static
-from . import views
+from portfolio.views import IndexView, DetailView
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    url(r'^$', IndexView.as_view(), name='index'),
+    url(r'^(?P<pk>[0-9]+)/$', DetailView.as_view(), name='detail'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
