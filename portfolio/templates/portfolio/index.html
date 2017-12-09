@@ -12,6 +12,9 @@
                 <div class="col-md-4" id="project-entry">
                     <div class="card" id="project-card">
                         <div class="card-header">
+                            <h3 class="text-center">
+                                #Skill
+                            </h3>
                         </div>
                         <a href="/{{ project.id }}">
                             <img class="card-img-top img-fluid" src="{% get_media_prefix %}{{ project.screenshot }}" />
@@ -30,9 +33,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
                 {% endfor %}
             {% else %}
                 <h1>No projects to display</h1>
