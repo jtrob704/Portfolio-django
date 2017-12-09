@@ -1,4 +1,3 @@
 __pycache__/
-jtrobinson/settings.py
-.env
 env/
+jtrobinson/settings.py
