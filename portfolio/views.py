@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 from django.views.generic import ListView, DetailView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from datetime import datetime
+from django.utils import timezone
 from taggit.models import Tag
 from .models import Project
 
@@ -11,7 +11,7 @@ class TagMixin(object):
     def get_context_data(self, **kwargs):
         context = super(TagMixin, self).get_context_data(**kwargs)
         context['tags'] = Tag.objects.all()
-        context['portfolio_time'] = datetime.now()
+        context['portfolio_time'] = timezone.now()
         return context
 
 
