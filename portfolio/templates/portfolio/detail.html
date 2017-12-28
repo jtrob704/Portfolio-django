@@ -1,7 +1,5 @@
 {% extends "portfolio/base.html" %}
-{% load cache %}
 {% load static %}
-{% cache 3600 content %}
 {% block content %}
 {% include "portfolio/header.html" %}
     <div class="text-center">
@@ -10,4 +8,3 @@
     <h3>{{ project.description }}</h3>
     </div>
 {% endblock %}
-{% endcache %}

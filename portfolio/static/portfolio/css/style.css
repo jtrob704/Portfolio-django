@@ -22,7 +22,9 @@ h1 {
 }
 
 #project-entry img {
+    padding-top: 20px;
     padding-bottom: 20px;
+    width: 85%;
 }
 
 #project-card {
@@ -30,8 +32,8 @@ h1 {
     margin-bottom: 20px;
 }
 
-.card-header, .card-footer {
-    background-color: orange;
+#tech-list {
+    display: inline;
 }
 
 #github-btn {
