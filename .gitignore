@@ -2,3 +2,5 @@ __pycache__/
 env/
 jtrobinson/settings.py
 .vscode/settings.json
+jtrobinson/portfolio/media/screenshots/*
+jtrobinson/portfolio/migrations/

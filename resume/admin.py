@@ -7,14 +7,17 @@ from .models import Resume, Skills, Experience, Education
 
 class SkillsInline(admin.StackedInline):
     model = Skills
+    extra = 1
 
 
-class ExperienceInline(admin.StackedInline):
+class ExperienceInline(admin.TabularInline):
     model = Experience
+    extra = 1
 
 
-class EducationInline(admin.StackedInline):
+class EducationInline(admin.TabularInline):
     model = Education
+    extra = 1
 
 class ResumeAdmin(admin.ModelAdmin):
     inlines = [SkillsInline, ExperienceInline, EducationInline]
