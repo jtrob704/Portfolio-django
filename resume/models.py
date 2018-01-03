@@ -27,8 +27,9 @@ class Experience(models.Model):
 
     resume = models.ForeignKey(Resume, on_delete=models.CASCADE)
     job_title = models.CharField(max_length = 30)
-    start_year = models.IntegerField(default = 2000)
-    end_year = models.IntegerField(default = datetime.now().year)
+    job_description = models.TextField()
+    start_year = models.DateField()
+    end_year = models.DateField()
 
 class Education(models.Model):
     class Meta:
@@ -37,5 +38,6 @@ class Education(models.Model):
     resume = models.ForeignKey(Resume, on_delete=models.CASCADE)
     school_name = models.CharField(max_length = 30)
     city = models.CharField(max_length = 30)
-    state = models.CharField(max_length = 2)
-    year = models.IntegerField(default = datetime.now().year)
+    state = models.CharField(max_length = 2)    
+    start_year = models.DateField()
+    end_year = models.DateField()

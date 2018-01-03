@@ -4,12 +4,12 @@
     {% include "portfolio/header.html" %}
         <h1>Main portfolio index current date/time: {{ portfolio_time }}</h1>
         <div class="container">
-        <div class="row">                    
+        <div class="row">                               
                 {% for project in list_of_projects %}                
                 <div class="col-md-4" id="project-entry">
                     <div class="card border-primary mb-3" id="project-card">
                         <a href="{% url 'detail' project.id %}">
-                            <img class="card-img-top img-fluid" alt="{{ project.name }} screenshot" src="{% get_media_prefix %}{{ project.screenshot }}" />
+                            <img class="card-img-top img-fluid" alt="{{ project.name }} screenshot" src="{{ project.screenshot_thumbnail.url }}" />
                         </a>
                         <div class="card-body">
                             <h3 class="card-title">{{ project.name }}</h3>

@@ -1,0 +1,41 @@
+* {
+    font-family: 'PT Sans', sans-serif;
+}
+
+/* body {
+    background: linear-gradient(to right, rgb(0, 51, 204), rgb(51, 153, 255));
+} */
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+.navbar-brand {
+    font-family: 'Qwigley', cursive;
+    font-size: 30pt;
+}
+
+#project-entry {
+    padding-top: 30px;
+    text-align: center;
+}
+
+#project-entry img {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 85%;
+}
+
+#project-card {
+    box-shadow: 10px 10px 5px #888888;
+    margin-bottom: 20px;
+}
+
+#tech-list {
+    display: inline;
+}
+
+#github-btn {
+    margin-bottom: 20px;
+}
