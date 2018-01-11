@@ -1,14 +1,15 @@
 * {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: white;
 }
 
-/* body {
-    background: linear-gradient(to right, rgb(0, 51, 204), rgb(51, 153, 255));
-} */
+body {
+    background-color: gray;
+}
 
 h1 {
     text-align: center;
-    padding: 20px;
+    padding: 2.0em;
 }
 
 .navbar-brand {
@@ -18,18 +19,22 @@ h1 {
 
 #project-entry {
     padding-top: 30px;
-    text-align: center;
+    text-align: center;    
 }
 
 #project-entry img {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 2.0em;
+    padding-bottom: 2.0em;
     width: 85%;
 }
 
 #project-card {
-    box-shadow: 10px 10px 5px #888888;
-    margin-bottom: 20px;
+    box-shadow: 10px 10px 5px #070000;
+    margin-bottom: 2.0em;
+}
+
+.card-text, .card-title {
+    color: #0070FF;
 }
 
 #tech-list {
@@ -37,5 +42,17 @@ h1 {
 }
 
 #github-btn {
-    margin-bottom: 20px;
+    margin-bottom: 2.0em;
+}
+
+.imgList {
+    padding-bottom: 2.0em;
+}
+
+#detail-tags {
+    font-size: 2.0em;
+}
+
+#detail-description {
+    padding-top: 2.0em;   
 }

@@ -4,7 +4,7 @@ from django.views.generic import ListView, DetailView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.utils import timezone
 from taggit.models import Tag
-from .models import Project
+from .models import Project, Screenshot
 
 
 class TagMixin(object):

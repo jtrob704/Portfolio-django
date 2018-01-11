@@ -10,6 +10,10 @@
     <h1>Description</h1>    
         {% for resume in list_of_resumes %}
             <p>{{ resume.description }}</p>
+        {% empty %}
+        <div class="alert alert-danger text-center" role="alert">
+            <h4>No resume to display</h4>
+        </div>        
         {% endfor %}    
 </div>
 <div id="skills">

@@ -4,7 +4,30 @@
 {% include "portfolio/header.html" %}
     <div class="text-center">
     <h1>{{ project.name }}</h1>
-    <img class="img-fluid" src="{% get_media_prefix %}{{ project.screenshot }}" />
-    <h3>{{ project.description }}</h3>
+        <div class="imgList">
+            {% for image in project.screenshot_set.all %}
+                <a href="{{ image.screenshot.url }}" data-fancybox="images">
+                    <img src="{{ image.screenshot_thumbnail.url }}" class="border border-primary"/>
+                </a>
+            {% empty %}
+                <div class="alert alert-danger text-center" role="alert">
+                    <h4>No screenshots to display</h4>
+                </div>     
+            {% endfor %}           
+        </div>
+        <div id="detail-tags">
+            <h2>Technologies</h2>
+            {% for tag in project.tags.all %}                                
+                <a href="{% url 'tagged' tag.slug %}" class="badge badge-primary" title="{{ tag.name }}">{{ tag.name }}</a>
+            {% empty %}
+                <a href="#" class="badge badge-primary" title="No tags">No tags</a>
+            {% endfor %}                
+        </div>
+        <div id="detail-description">
+            <p>{{ project.description }}</p>
+        </div>
+        <span>            
+            <a class="btn btn-primary" id="github-btn" target="_blank" href="{{ project.URL }}" title="View on Github"><i class="fab fa-github fa-2x" aria-hidden="true"></i> View on Github</a>
+        </span>        
     </div>
 {% endblock %}
