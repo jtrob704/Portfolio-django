@@ -1,0 +1,39 @@
+{% extends "homepage/base.html" %} {% load static %} {% block content %} {% include "homepage/header.html" %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8 text-center bg-primary" id="about">
+            <h2>J.T. Robinson</h2>
+            <h3>Full-Stack Web Developer</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla tincidunt urna sed tempus. Ut
+                erat ipsum, vestibulum venenatis hendrerit quis, blandit id felis. Phasellus mollis laoreet aliquam. Nunc
+                sagittis in mauris sit amet consectetur. Proin non vestibulum ex. Nam tincidunt nibh turpis, et rutrum mauris
+                pulvinar eget. Sed ac risus ut lectus lobortis ultricies. Aliquam eleifend tincidunt interdum. Etiam fringilla
+                urna id justo tempor fringilla. Cras a diam eleifend, pellentesque justo sit amet, rhoncus elit. Cras quis
+                odio ac metus dapibus cursus id in odio. Cras sit amet felis dolor. Integer arcu enim, porttitor a dui ultricies,
+                tempor bibendum eros. Donec feugiat, augue ut consequat lacinia, diam nibh pulvinar leo, eget pretium erat
+                ipsum et mauris.</p>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+    <div class="row text-center rounded bg-primary" id="intro">
+        <div class="col-md-4">
+            <h4>Front-End</h4>
+            <i class="fas fa-code fa-5x"></i>
+            <h4>HTML, CSS, JS</h4>
+        </div>
+        <div class="col-md-4">
+            <h4>Back-End</h4>
+            <i class="fab fa-python fa-5x"></i>
+            <h4>Python</h4>
+        </div>
+        <div class="col-md-4">
+            <h4>Database</h4>
+            <i class="fas fa-database fa-5x"></i>
+            <h4>PostgreSQL</h4>
+        </div>
+    </div>
+</div>
+{% endblock %}

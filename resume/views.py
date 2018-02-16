@@ -13,6 +13,7 @@ class ResumeView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(ResumeView, self).get_context_data(**kwargs)
+        context['active_page'] = "resume"
         context['list_of_skills'] = Skills.objects.all()
         context['list_of_experience'] = Experience.objects.all()
         context['list_of_education'] = Education.objects.all()

@@ -23,11 +23,21 @@ class IndexView(TagMixin, ListView):
     queryset = Project.objects.order_by('pub_date').prefetch_related('tags')
     context_object_name = 'list_of_projects'
 
+    def get_context_data(self, **kwargs):    
+        context = super(IndexView, self).get_context_data(**kwargs)
+        context['active_page'] = "portfolio"
+        return context
+
 
 class DetailView(DetailView):
     
     template_name = 'portfolio/detail.html'
     model = Project
+
+    def get_context_data(self, **kwargs):    
+        context = super(DetailView, self).get_context_data(**kwargs)
+        context['active_page'] = "portfolio"
+        return context
 
 
 class TagView(TagMixin, ListView):

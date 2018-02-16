@@ -5,12 +5,12 @@ from django.db import models
 from imagekit.models import ImageSpecField, ProcessedImageField
 from imagekit.processors import ResizeToFill
 from taggit.managers import TaggableManager
-
-# Create your models here.
+from autoslug import AutoSlugField
 
 
 class Project(models.Model):
     name = models.CharField(max_length=100)
+    slug = AutoSlugField(populate_from='name',null=True)
     description = models.TextField()
     URL = models.URLField(max_length=200)    
     main_index_thumbnail = ProcessedImageField(upload_to='screenshots',

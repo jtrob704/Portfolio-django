@@ -1,0 +1,10 @@
+{% extends "homepage/base.html" %} 
+{% load static %} 
+{% block content %} 
+{% with active_page="contact" %}
+{% include "homepage/header.html" %}
+{% endwith %}
+<div class="alert alert-success text-center rounded" role="alert">
+  <h2>Your message has been sent!</h2>
+</div>
+{% endblock %}

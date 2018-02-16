@@ -5,9 +5,9 @@
 <div class="container">
 <div class="row">
 <div class="col-md-2"></div>
-<div class="col-md-8">
-<div id="description">
-    <h1>Description</h1>    
+<div class="col-md-8 bg-primary text-center resume">
+<!-- <div id="description">
+    <h4>Description</h4>    
         {% for resume in list_of_resumes %}
             <p>{{ resume.description }}</p>
         {% empty %}
@@ -15,9 +15,9 @@
             <h4>No resume to display</h4>
         </div>        
         {% endfor %}    
-</div>
+</div> -->
 <div id="skills">
-    <h1>Skills</h1>
+    <h4>Skills</h4>
     <ul>
         {% for skill in list_of_skills %}
             <li>{{ skill.skill_name }}</li>
@@ -25,7 +25,7 @@
     </ul>
 </div>
 <div id="experience">
-    <h1>Experience</h1>
+    <h4>Experience</h4>
     <ul>
         {% for experience in list_of_experience %}
             <li>{{ experience.job_title }}</li>
@@ -34,7 +34,7 @@
     </ul>
 </div>
 <div id="education">
-    <h1>Education</h1>
+    <h4>Education</h4>
     <ul>
         {% for education in list_of_education %}
             <li>{{ education.school_name }}</li>        
