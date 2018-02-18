@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^', include('homepage.urls')),
     url(r'^portfolio/', include('portfolio.urls')),
     url(r'^resume/', include('resume.urls')),
+    url(r'grappelli/', include('grappelli.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^contact/', include('contact_form.urls')),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
