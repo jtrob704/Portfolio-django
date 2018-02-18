@@ -24,6 +24,11 @@ class Project(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        from django.urls import reverse
+        from portfolio.urls import urlpatterns
+        return reverse('detail', args=[str(self.slug)])
+
 
 class Screenshot(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
