@@ -10,8 +10,7 @@ from .models import Project, Screenshot
 class TagMixin(object):
     def get_context_data(self, **kwargs):
         context = super(TagMixin, self).get_context_data(**kwargs)
-        context['tags'] = Tag.objects.all()
-        context['portfolio_time'] = timezone.now()
+        context['tags'] = Tag.objects.all()        
         return context
 
 

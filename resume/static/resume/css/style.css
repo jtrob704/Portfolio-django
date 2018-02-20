@@ -5,21 +5,20 @@
 
 body, html {
     height: 100%;    
-}
-
-.bg {
-    background-image: url("../img/web-design-2038872_1920-bw.jpg");
-    height: 100%; 
+    background-image: url("../img/web-design-2038872_1920-bw.jpg");    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;    
 }
 
 @media (max-width: 800px) {
-    .bg {
-        background-image: none;        
+    body, html {
+        background-image: url("../img/web-design-2038872_1920-bw.jpg");     
+        background-position: center;
+        background-repeat: repeat-y;
+        background-size: cover;          
     }
-}
+} 
 
 h1 {
     text-align: center;
@@ -29,46 +28,6 @@ h1 {
 .navbar-brand {
     font-family: 'Qwigley', cursive;
     font-size: 30pt;
-}
-
-#project-entry {
-    padding-top: 30px;
-    text-align: center;    
-}
-
-#project-entry img {
-    padding-top: 2.0em;
-    padding-bottom: 2.0em;
-    width: 85%;
-}
-
-#project-card {
-    box-shadow: 10px 10px 5px #070000;
-    margin-bottom: 2.0em;
-}
-
-.card-text, .card-title {
-    color: #0070FF;
-}
-
-#tech-list {
-    display: inline;
-}
-
-#github-btn {
-    margin-bottom: 2.0em;
-}
-
-.imgList {
-    padding-bottom: 2.0em;
-}
-
-#detail-tags {
-    font-size: 2.0em;
-}
-
-#detail-description {
-    padding-top: 2.0em;   
 }
 
 .resume {

@@ -5,6 +5,7 @@ django-appconf==1.0.2
 django-autoslug==1.9.3
 django-contact-form==1.4.2
 django-debug-toolbar==1.9
+django-grappelli==2.11.1
 django-imagekit==4.0.2
 django-ses==0.8.5
 django-taggit==0.22.1
