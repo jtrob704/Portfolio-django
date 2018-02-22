@@ -2,7 +2,6 @@
 from __future__ import unicode_literals
 from django.views.generic import ListView, DetailView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.utils import timezone
 from taggit.models import Tag
 from .models import Project, Screenshot
 
@@ -19,7 +18,7 @@ class IndexView(TagMixin, ListView):
     template_name = 'portfolio/index.html'
     model = Project
     paginate_by = '3'
-    queryset = Project.objects.order_by('pub_date').prefetch_related('tags')
+    queryset = Project.objects.prefetch_related('tags')
     context_object_name = 'list_of_projects'
 
     def get_context_data(self, **kwargs):    
@@ -47,4 +46,4 @@ class TagView(TagMixin, ListView):
     context_object_name = 'list_of_projects'     
 
     def get_queryset(self):
-        return Project.objects.filter(tags__slug=self.kwargs.get('slug')).order_by('pub_date').prefetch_related('tags')
+        return Project.objects.filter(tags__slug=self.kwargs.get('slug')).prefetch_related('tags')
