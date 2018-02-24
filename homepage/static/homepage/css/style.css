@@ -38,6 +38,11 @@ h1 {
     box-shadow: 10px 10px 5px #070000;
 }
 
+#about a {
+    color: white;
+    text-decoration: underline;
+}
+
 #intro {
     padding-top: 2.0em;
     padding-bottom: 2.0em;

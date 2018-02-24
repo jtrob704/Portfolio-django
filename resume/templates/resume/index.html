@@ -10,16 +10,19 @@
     <h4>Skills</h4>
     <ul>
         {% for skill in list_of_skills %}
-            <li>{{ skill.skill_name }}</li>
+            <li><strong>{{ skill.skill_name }}</strong></li>
         {% endfor %}
     </ul>
+    <br />
 </div>
 <div id="experience">
     <h4>Experience</h4>
     <ul>
         {% for experience in list_of_experience %}
-            <li>{{ experience.job_title }}</li>
-            <p>{{ experience.job_description }}</p>
+            <li><strong>{{ experience.job_title }}</strong></li>
+            <li><em>{{ experience.year }}</em></li>
+            <li>{{ experience.job_description }}</li>            
+            <br/> 
         {% endfor %}
     </ul>
 </div>
@@ -27,7 +30,9 @@
     <h4>Education</h4>
     <ul>
         {% for education in list_of_education %}
-            <li>{{ education.school_name }}</li>        
+            <li><strong>{{ education.school_name }}</strong></li>     
+            <li><em>{{ education.year }}</em></li>   
+            <br />
         {% endfor %}
     </ul>
 </div>

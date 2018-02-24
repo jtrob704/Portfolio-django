@@ -8,7 +8,7 @@ body, html {
     background-image: url("../img/web-design-2038872_1920-bw.jpg");    
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;    
+    background-size: cover;        
 }
 
 @media (max-width: 800px) {
@@ -25,13 +25,21 @@ h1 {
     padding: 2.0em;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .navbar-brand {
     font-family: 'Qwigley', cursive;
     font-size: 30pt;
 }
 
 .resume {
-    margin-top: 10%;
+    margin-top: 5%;        
+}
+
+.resume ul li {
+    margin-left: -2.5em;
 }
 
 .resume h4 {

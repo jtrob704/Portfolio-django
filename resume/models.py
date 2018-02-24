@@ -6,6 +6,15 @@ from datetime import datetime
 from django.db import models
 
 # Create your models here.
+
+YEAR_CHOICES = []
+for r in range(1990, (datetime.now().year+1)):
+    YEAR_CHOICES.append((r,r))
+
+def current_year():
+    return datetime.now().year
+
+
 class Resume(models.Model):
     title = models.CharField(max_length = 30)    
     pub_date = models.DateTimeField('date published')
@@ -27,8 +36,7 @@ class Experience(models.Model):
     resume = models.ForeignKey(Resume, on_delete=models.CASCADE)
     job_title = models.CharField(max_length = 30)
     job_description = models.TextField()
-    start_year = models.DateField()
-    end_year = models.DateField()
+    year = models.IntegerField(choices=YEAR_CHOICES, default=current_year())
 
 class Education(models.Model):
     class Meta:
@@ -38,5 +46,4 @@ class Education(models.Model):
     school_name = models.CharField(max_length = 30)
     city = models.CharField(max_length = 30)
     state = models.CharField(max_length = 2)    
-    start_year = models.DateField()
-    end_year = models.DateField()
+    year = models.IntegerField(choices=YEAR_CHOICES, default=current_year())
