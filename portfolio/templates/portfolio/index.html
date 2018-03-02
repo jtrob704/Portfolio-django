@@ -6,13 +6,15 @@
         <div class="row">                               
                 {% for project in list_of_projects %}                
                 <div class="col-md-4" id="project-entry">
-                    <div class="card text-white bg-primary mb-3" id="project-card">
+                    <div class="card text-white bg-primary border-white mb-3" id="project-card">
                         <a href="{% url 'detail' project.slug %}">
                             <img class="card-img-top img-fluid" alt="{{ project.name }} screenshot" src="{{ project.main_index_thumbnail.url }}" />
                         </a>
                         <div class="card-body">
-                            <h3 class="card-title">{{ project.name }}</h3>
-                            <p class="card-text">{{ project.description }}</p>                                
+                                <a href="{% url 'detail' project.slug %}">
+                                    <h3 class="card-title">{{ project.name }}</h3>
+                                </a>
+                                <p class="card-text">{{ project.description }}</p>                                
                                     {% for tag in project.tags.all %}                                
                                         <a href="{% url 'tagged' tag.slug %}" class="badge text-primary project-badge"  title="{{ tag.name }}">{{ tag.name }}</a>
                                     {% empty %}

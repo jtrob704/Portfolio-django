@@ -31,6 +31,10 @@ h1 {
     font-size: 30pt;
 }
 
+.card-body a {
+    color: white;
+}
+
 #project-entry {
     padding-top: 30px;
     text-align: center;    
@@ -45,7 +49,7 @@ h1 {
 #project-card {
     margin-top: 5.0em;
     box-shadow: 10px 10px 5px #070000;
-    margin-bottom: 2.0em;
+    margin-bottom: 2.0em;    
 }
 
 .project-badge {    
@@ -67,6 +71,7 @@ h1 {
 .details {
     margin-top: 4.0em;
     box-shadow: 10px 10px 5px #070000;
+    border-style: ridge;   
 }
 
 .imgList {
