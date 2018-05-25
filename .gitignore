@@ -8,3 +8,4 @@ jtrobinson/portfolio/media/*
 jtrobinson/portfolio/migrations/
 static/*
 media/*
+*.pyc
